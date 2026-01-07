@@ -3,11 +3,136 @@
 <html>
 
 <head>
+	<style>
+    body {
+        background: #f4f6f8;
+        font-family: Arial, sans-serif;
+    }
+
+    form {
+        width: 420px;
+        margin: 40px auto;
+        background: #ffffff;
+        padding: 25px;
+        border-radius: 10px;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    label {
+        margin-top: 12px;
+        font-weight: 600;
+        color: #333;
+    }
+
+    input,
+    select {
+        width: 100%;
+        padding: 10px;
+        margin-top: 6px;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+        font-size: 14px;
+    }
+
+    input:focus,
+    select:focus {
+        outline: none;
+        border-color: #4CAF50;
+    }
+ */
+    .radio-group {
+        margin-top: 6px;
+    }
+
+   .radio-group {
+    margin-top: 8px;
+    display: flex;
+    gap: 20px;
+}
+
+.radio-option {
+    /* display: flex; */
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+    font-weight: normal;
+}
+
+.radio-option input[type="radio"] {
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+}
+
+    button {
+        margin-top: 20px;
+        padding: 12px;
+        width: 100%;
+        background: #4CAF50;
+        color: white;
+        font-size: 16px;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+    }
+
+    button:hover {
+        background: #43a047;
+    }
+</style>
+
+	
 	<link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-	<!-- the entire body must be written by student -->
+	<form method="post">
+
+    <label for="name">Name</label>
+    <input type="text" id="name" name="name" placeholder="Name" required>
+
+    <label for="email">Email</label>
+    <input type="email" id="email" name="email" placeholder="Email" required>
+
+	<div class="radio-group">
+		<label>Gender</label>
+	    <label class="radio-option" for="gender_m">
+	        <input type="radio" id="gender_m" name="gender" required>
+	        Male
+	    </label>
+	    <label class="radio-option" for="gender_f">
+		        <input type="radio" id="gender_f" name="gender" required>
+        Female
+	    </label>
+	</div>
+
+    <label for="cars">Car Brands</label>
+    <select id="cars" name="cars" required>
+        <option value="" disabled selected>--Please choose an option--</option>
+        <option>Audi</option>
+        <option>BMW</option>
+        <option>Tesla</option>
+    </select>
+
+    <label for="age">Age</label>
+    <input type="number" id="age" name="age" placeholder="Age" required>
+
+    <label for="dob">DOB</label>
+    <input type="date" id="dob" name="dob" required>
+
+    <label for="tel">Phone Number</label>
+    <input type="tel" id="tel" name="tel" placeholder="xxx-xxx-xxxx">
+
+    <label for="password">Password</label>
+    <input type="password" id="password" name="password" placeholder="Password" required>
+
+    <input type="checkbox" id="tos" name="tos" required>
+    <label for="tos">I agree to the TOS</label>
+
+    <button type="submit">Submit</button>
+
+</form>
+	
     <script type="text/javascript" src="./script.js">
 </script>
 
